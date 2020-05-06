@@ -1,4 +1,6 @@
-fasta= ('/home/khaled/Downloads/KJ_problem/Cgr-B-H4-1G22_corrected_assembled_S-locus.fas')
+fasta= ('/home/khaled/Downloads/KJ_problem/Cgr-B-H4-1G22_corrected_assembled_S-locus.fas
+###AT - It doesn't make so much sense to hard code the data file here. Ideally, the user would be able to select the file
+###AT - they want to run. Consider something like sys.argv[] or getopts.
 
 def translate(data):
     """this function translates the nucleotides sequence in the data file into amino acid"""
@@ -44,3 +46,4 @@ def blast_gene(data,database_type,base):
 
 
 gene_blast= blast_gene(get_gene(file,60,150,6,9),"blastp","nr")
+###AT - 'file' here doesn't exist for me. Do you mean 'fasta'?
